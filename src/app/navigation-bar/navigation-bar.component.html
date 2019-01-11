@@ -1,0 +1,61 @@
+<nav  class="navbar navbar-expand-lg navbar-light bg-light">
+        <a  class="navbar-brand"  href="#">Computer Science</a>
+        <button  class="navbar-toggler"  type="button"  data-toggle="collapse"  data-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent"  aria-expanded="false"  aria-label="Toggle navigation">
+        <span  class="navbar-toggler-icon"></span>
+        </button>
+    <div  class="collapse navbar-collapse"  id="navbarSupportedContent">
+        <ul  class="navbar-nav mr-auto">
+                <button type="button" ngbAutofocus class="btn btn-danger"
+                (click)="modal.close('Ok click')">Login</button>
+            <li  class="nav-item active">
+            <a  class="nav-link"  href="#">Home <span  class="sr-only">(current)</span></a>
+            </li>
+            <li  class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle"  href="#"  id="navbarDropdown"  role="button"  data-toggle="dropdown"  aria-haspopup="true"  aria-expanded="false">
+            Actions
+            </a>
+            <div  class="dropdown-menu"  aria-labelledby="navbarDropdown">
+            <a  class="dropdown-item" [routerLink]="'/accounts'"> Register </a>
+            <a  class="dropdown-item" [routerLink]="'/create-account'">Login</a>
+            <!-- <div  class="dropdown-divider"></div> -->
+            <a  class="dropdown-item" [routerLink]="'/contacts'"> About Us </a>
+            <a  class="dropdown-item" [routerLink]="'/create-contact'"> Contact Us </a>
+            <!-- <div  class="dropdown-divider"></div> -->
+            <a  class="dropdown-item" [routerLink]="'/leads'"> Blog </a>
+            <a  class="dropdown-item" [routerLink]="'/create-lead'"> Market </a>
+            <!-- <div  class="dropdown-divider"></div> -->
+            </div>
+            </li>
+    
+    </ul>
+    </div>
+    </nav>
+    
+    <div  class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="mainContent">
+            <h1>
+                    My Contacts
+                    </h1>
+                    <div>
+                    <table  class="table">
+                    <thead>
+                    <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let contact of contacts">
+                        <td>  </td>
+                        <td>  </td>
+                        <td>  </td>
+                        <td>  </td>
+                        <td>  </td>
+                    </tr>
+                    </table>
+                    </div>
+    </div>
